@@ -1,8 +1,7 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -O2
-SRCDIR = src
-SRCS = $(SRCDIR)/main.cpp $(SRCDIR)/explorer.cpp $(SRCDIR)/fileops.cpp
-TARGET = file-explorer
+CXXFLAGS = -std=c++17 -Wall -Wextra
+TARGET = file_explorer
+SRCS = src/main.cpp src/explorer.cpp src/fileops.cpp
 
 all: $(TARGET)
 
@@ -11,3 +10,5 @@ $(TARGET): $(SRCS)
 
 clean:
 	rm -f $(TARGET)
+
+.PHONY: all clean
